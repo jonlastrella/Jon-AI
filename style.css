@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+  color: whitesmoke;
+}
+.videobg {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (min-aspect-ratio: 16/9) {
+  .videobg {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .videobg {
+    width: auto;
+    height: 100%;
+  }
+}
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+ul {
+  list-style: none;
+}
+header {
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+nav {
+  width: 90%;
+  margin: auto;
+  display: flex;
+}
+nav h1 {
+  flex: 1;
+  color: whitesmoke;
+}
+nav ul {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul li a:hover {
+  color: #a9ffff;
+}
+.banner {
+  width: 90%;
+  height: 100vh;
+  margin: auto;
+  padding-top: 10%;
+  opacity: 0.6;
+}
+.banner h1 {
+  font-size: 82px;
+  width: fit-content;
+}
+.banner h1:hover {
+  color: #a9ffff;
+  opacity: 1;
+  cursor: wait;
+}
+.about,
+.technology,
+.projects {
+  width: 90%;
+  margin: auto;
+}
+.about h1,
+.technology h1 {
+  width: fit-content;
+  border-bottom: 2px solid #a9ffff;
+}
+.about p {
+  margin: 3% 0;
+}
+/* achievements */
+.ach {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  padding: 40px 0;
+  border-top: 2px solid #a9ffff;
+  border-bottom: 2px solid #a9ffff;
+  justify-content: space-around;
+  text-align: center;
+}
+.bold {
+  font-size: 42px;
+  font-weight: 600;
+}
+.light {
+  letter-spacing: 5px;
+}
+/* technology */
+.technology {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #a9ffff;
+}
+.techinfo {
+  width: 50%;
+  border-right: 1px solid #a9ffff;
+  padding: 22px 0;
+}
+.techbold {
+  margin: 10% 0;
+  font-weight: bold;
+  font-size: 20px;
+}
+.language {
+  display: flex;
+  text-align: center;
+  /* background: red; */
+}
+.language ul {
+  padding: 20px;
+}
+.midlang {
+  border-right: 1px solid #a9ffff;
+  border-left: 1px solid #a9ffff;
+}
+.langbold {
+  font-size: 25px;
+  font-weight: 600;
+}
+/* projects */
+.projects h1 {
+  margin-top: 5%;
+  text-align: center;
+}
+.techvideo {
+  opacity: 0.1;
+  z-index: -2;
+  width: 100%;
+  margin: auto;
+}
+/* contact */
+.contact {
+  width: 90%;
+  margin: auto;
+  border-bottom: 1px solid #a9ffff;
+  border-top: 1px solid #a9ffff;
+  margin-bottom: 5%;
+}
+.contact h1 {
+  width: fit-content;
+  margin: auto;
+  border-bottom: 1px solid #a9ffff;
+}
+.details {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 0;
+}
+.details ul {
+  text-align: center;
+}
+/* media queries */
+@media only screen and (max-width: 1024px) {
+  .technology {
+    flex-direction: column;
+  }
+  .techinfo {
+    border: none;
+    border-bottom: 1px solid #a9ffff;
+    width: 100%;
+  }
+  .details {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 768px) {
+  nav {
+    width: 90%;
+  }
+  .hamburger {
+    position: absolute;
+    width: fit-content;
+    top: 20px;
+    right: 65px;
+    z-index: 2;
+  }
+  .hamburger:hover {
+    cursor: pointer;
+  }
+  .line {
+    width: 30px;
+    height: 3px;
+    background-color: whitesmoke;
+    margin: 5px;
+  }
+  .line2 {
+    width: 20px;
+    height: 3px;
+    background-color: whitesmoke;
+    margin: 5px;
+    margin-left: auto;
+  }
+  nav ul {
+    flex-direction: column;
+    visibility: hidden;
+    justify-content: center;
+    height: 0;
+    width: 0;
+  }
+  nav ul.open {
+    height: 100vh;
+    visibility: visible;
+    margin-right: 30%;
+  }
+  nav ul li a:hover {
+    font-size: 52px;
+    font-weight: bold;
+  }
+  section.hide {
+    display: none;
+  }
+  nav ul li {
+    margin: 15px 0;
+  }
+  .details {
+    flex-direction: column;
+  }
+  .technology {
+    flex-direction: column;
+  }
+  .techinfo {
+    border: none;
+    border-bottom: 1px solid #a9ffff;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .hamburger {
+    position: absolute;
+    width: fit-content;
+    top: 13px;
+    right: 13px;
+    z-index: 2;
+  }
+  .banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .banner h1 {
+    font-size: 57px;
+  }
+  .about h1 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .ach {
+    flex-direction: column;
+  }
+  .ach .bold {
+    font-size: 28px;
+  }
+  .techinfo h1 {
+    font-size: 20px;
+  }
+  p.techbold {
+    font-size: 14px;
+  }
+  .language {
+    flex-direction: column;
+  }
+  .midlang {
+    border: none;
+  }
+  .language li {
+    font-size: 16px;
+  }
+  .details .bold {
+    font-size: 16px;
+  }
+}
